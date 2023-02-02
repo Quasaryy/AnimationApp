@@ -1,24 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kS-yE-tsF">
+                                <rect key="frame" x="47.5" y="70" width="280" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSv-fA-xze">
+                                        <rect key="frame" x="37" y="31.5" width="206" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="JSv-fA-xze" firstAttribute="centerX" secondItem="1kS-yE-tsF" secondAttribute="centerX" id="BdL-Ws-C8o"/>
+                                    <constraint firstAttribute="height" constant="100" id="bRS-oZ-rbQ"/>
+                                    <constraint firstItem="JSv-fA-xze" firstAttribute="centerY" secondItem="1kS-yE-tsF" secondAttribute="centerY" id="bgn-py-zKv"/>
+                                    <constraint firstAttribute="width" constant="280" id="mHS-ck-q1Y"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naC-KF-4sI">
+                                <rect key="frame" x="47.5" y="210" width="280" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-J2-55Y">
+                                        <rect key="frame" x="25.5" y="31.5" width="229" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstItem="t8w-J2-55Y" firstAttribute="centerX" secondItem="naC-KF-4sI" secondAttribute="centerX" id="3oY-O2-34L"/>
+                                    <constraint firstAttribute="height" constant="100" id="9M4-im-YEn"/>
+                                    <constraint firstItem="t8w-J2-55Y" firstAttribute="centerY" secondItem="naC-KF-4sI" secondAttribute="centerY" id="NLJ-63-h8z"/>
+                                    <constraint firstAttribute="width" constant="280" id="r1w-Ya-OHW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-IC-ksW">
+                                <rect key="frame" x="47.5" y="450" width="280" height="42"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Core Animation Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="coreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQx-Qd-w60"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-0q-okA">
+                                <rect key="frame" x="47.5" y="532" width="280" height="42"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Spring Animation Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="springButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4u-fO-gaO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="1kS-yE-tsF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Ye-i3-gtB"/>
+                            <constraint firstItem="naC-KF-4sI" firstAttribute="top" secondItem="1kS-yE-tsF" secondAttribute="bottom" constant="40" id="Fb5-0W-frz"/>
+                            <constraint firstItem="naC-KF-4sI" firstAttribute="leading" secondItem="oIq-0q-okA" secondAttribute="leading" id="Fis-6P-FpU"/>
+                            <constraint firstItem="1kS-yE-tsF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="HMx-m9-QJh"/>
+                            <constraint firstItem="oIq-0q-okA" firstAttribute="top" secondItem="g1e-IC-ksW" secondAttribute="bottom" constant="40" id="Z5r-wA-GmA"/>
+                            <constraint firstItem="g1e-IC-ksW" firstAttribute="width" secondItem="1kS-yE-tsF" secondAttribute="width" id="gv5-Tq-qlb"/>
+                            <constraint firstItem="oIq-0q-okA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l0A-zd-rTv"/>
+                            <constraint firstItem="g1e-IC-ksW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nlF-gT-yf1"/>
+                            <constraint firstItem="naC-KF-4sI" firstAttribute="centerX" secondItem="1kS-yE-tsF" secondAttribute="centerX" id="rKp-dV-Bk4"/>
+                            <constraint firstItem="oIq-0q-okA" firstAttribute="width" secondItem="1kS-yE-tsF" secondAttribute="width" id="sIp-AJ-U8v"/>
+                            <constraint firstItem="g1e-IC-ksW" firstAttribute="top" secondItem="naC-KF-4sI" secondAttribute="bottom" constant="140" id="vjJ-1S-9Xw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coreAnimationView" destination="1kS-yE-tsF" id="6Du-d9-aFW"/>
+                        <outlet property="springAnimationView" destination="naC-KF-4sI" id="bCu-wK-O9G"/>
+                        <outlet property="springButton" destination="oIq-0q-okA" id="lQW-6K-AiY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
