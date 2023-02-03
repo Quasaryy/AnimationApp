@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func springButtonTapped(_ sender: SpringButton) {
-        springAnimationView.animation = "fadeInLeft"
+        springAnimationView.animation = Spring.AnimationPreset.FadeInLeft.rawValue
         springAnimationView.animate()
         
         animationForSpringButton(button: springButton)
@@ -72,8 +72,8 @@ extension ViewController {
     }
     
     private func animationForSpringButton(button: SpringButton) {
-        button.animation = "morph"
-        button.curve = "easeOut"
+        button.animation = Spring.AnimationPreset.Morph.rawValue
+        button.curve = Spring.AnimationCurve.EaseOut.rawValue
         button.duration = 0.5
         button.animate()
     }
