@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -39,7 +40,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naC-KF-4sI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naC-KF-4sI" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="47.5" y="210" width="280" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-J2-55Y">
@@ -79,7 +80,7 @@
                                     <action selector="coreButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQx-Qd-w60"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-0q-okA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIq-0q-okA" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="47.5" y="532" width="280" height="42"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -93,7 +94,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="springButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4u-fO-gaO"/>
+                                    <action selector="springButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5J-5B-uqM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,8 +116,8 @@
                     </view>
                     <connections>
                         <outlet property="coreAnimationView" destination="1kS-yE-tsF" id="6Du-d9-aFW"/>
-                        <outlet property="springAnimationView" destination="naC-KF-4sI" id="bCu-wK-O9G"/>
-                        <outlet property="springButton" destination="oIq-0q-okA" id="lQW-6K-AiY"/>
+                        <outlet property="springAnimationView" destination="naC-KF-4sI" id="dVV-wF-Hb9"/>
+                        <outlet property="springButton" destination="oIq-0q-okA" id="y54-uE-zVr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

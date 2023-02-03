@@ -6,38 +6,43 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
     
-    @IBOutlet var springAnimationView: UIView!
     @IBOutlet var coreAnimationView: UIView!
-    @IBOutlet var springButton: UIButton!
+    @IBOutlet var springAnimationView: SpringView!
+    @IBOutlet var springButton: SpringButton!
     
     var originPosition: CGFloat!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
+    // MARK: Override Methods
     override func viewWillLayoutSubviews() {
         originPosition = coreAnimationView.frame.origin.x
     }
     
+    // MARK: IB Actions
     @IBAction func coreButtonTapped(_ sender: UIButton) {
         buttonAnimation(button: sender)
+        
         animateView()
-        shakeButton(button: springButton)
+        shakeView(view: coreAnimationView)
     }
     
-    @IBAction func springButtonTapped(_ sender: UIButton) {
-        shakeButton(button: springButton)
+    @IBAction func springButtonTapped(_ sender: SpringButton) {
+        springAnimationView.animation = "fadeInLeft"
+        springAnimationView.animate()
+        
+        animationForSpringButton(button: springButton)
     }
+    
+    
 }
-
+// MARK: Private Methods
 extension ViewController {
     private func animateView() {
-        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat]) {
+        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat]) { [weak self] in
+            guard let self = self else { return }
             if self.coreAnimationView.frame.origin.x == self.originPosition {
                 self.coreAnimationView.frame.origin.x += 20
                 self.coreAnimationView.frame.origin.x -= 40
@@ -54,7 +59,7 @@ extension ViewController {
         button.layer.add(animation, forKey: nil)
     }
     
-    private func shakeButton(button: UIButton) {
+    private func shakeView(view: UIView) {
         let animation = CAKeyframeAnimation (keyPath: "position.x")
         animation.values = [0, 10, -10, 10, 0]
         animation.keyTimes = [0, 0.08, 0.25, 0.415, 0.5]
@@ -63,7 +68,14 @@ extension ViewController {
         animation.isRemovedOnCompletion = false
         animation.isAdditive = true
         
-        button.layer.add(animation, forKey: nil)
+        view.layer.add(animation, forKey: nil)
+    }
+    
+    private func animationForSpringButton(button: SpringButton) {
+        button.animation = "morph"
+        button.curve = "easeOut"
+        button.duration = 0.5
+        button.animate()
     }
     
 }
